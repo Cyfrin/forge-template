@@ -1,14 +1,17 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {Test, console} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import { Test, console } from "forge-std/Test.sol";
+import { Counter } from "src/Counter.sol";
+import { Deployer } from "script/Deployer.s.sol";
 
 contract CounterTest is Test {
     Counter public counter;
+    Deployer public deployer;
 
     function setUp() public {
-        counter = new Counter();
+        deployer = new Deployer();
+        counter = deployer.deploy();
         counter.setNumber(0);
     }
 

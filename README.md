@@ -1,66 +1,76 @@
-## Foundry
+# Name 
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+<p align="center">
+<img src="./images/logo.png" width="200" alt="Name">
+<br/>
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- [Name](#name)
+- [About](#about)
+- [Getting Started](#getting-started)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Quickstart](#quickstart)
+- [Usage](#usage)
+  - [Coverage](#coverage)
+- [Audit Scope Details](#audit-scope-details)
+  - [Roles](#roles)
+  - [Known Issues](#known-issues)
 
-## Documentation
 
-https://book.getfoundry.sh/
+# About
 
-## Usage
+<!-- Include a blurb about your project, including a link to docs if applicable -->
 
-### Build
+# Getting Started
 
-```shell
-$ forge build
+## Requirements
+
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
+- [foundry](https://getfoundry.sh/)
+  - You'll know you did it right if you can run `forge --version` and you see a response like `forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)`
+<!-- Additional requirements here -->
+
+## Installation
+
+```bash
+git clone <MY_REPO>
+cd <MY_REPO>
+make
 ```
 
-### Test
+## Quickstart 
 
-```shell
-$ forge test
+```bash
+make test
 ```
 
-### Format
+# Usage 
 
-```shell
-$ forge fmt
+## Coverage
+
+```bash
+forge test --report debug
 ```
 
-### Gas Snapshots
+# Audit Scope Details 
 
-```shell
-$ forge snapshot
+- Commit Hash: XXX
+- Files in scope:
+``` 
+make scope
 ```
+- Solc Version: X.X.X
+- Chain(s) to deploy to:
+  - XXX
+- ERC20 Token Compatibilities:
+  - XXX
 
-### Anvil
+## Roles
 
-```shell
-$ anvil
-```
+- Role1: <!-- Description -->
 
-### Deploy
+## Known Issues
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- Issue1: <!-- Description -->
