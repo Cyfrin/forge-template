@@ -2,6 +2,7 @@
 pragma solidity 0.8.24;
 
 import { Script } from "forge-std/Script.sol";
+import {console2} from "forge-std/console2.sol";
 
 contract HelperConfig is Script {
     /*//////////////////////////////////////////////////////////////
@@ -86,9 +87,11 @@ contract HelperConfig is Script {
         if (localNetworkConfig.someVar != address(0)) {
             return localNetworkConfig;
         }
+        console2.log(unicode"⚠️ You have deployed a mock conract!");
+        console2.log("Make sure this was intentional");
 
         _deployMocks();
-
+        
         localNetworkConfig = NetworkConfig({ someVar: address(1) });
         return localNetworkConfig;
     }
