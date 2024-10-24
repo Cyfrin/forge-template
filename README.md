@@ -51,13 +51,16 @@ make test
 ## Coverage
 
 ```bash
-forge test --report debug
+forge coverage
 ```
 
 # Audit Scope Details 
 
 - Commit Hash: XXX
 - Files in scope:
+
+> You'll need to install tree foor [linux](https://linux.die.net/man/1/tree) or [mac](https://formulae.brew.sh/formula/tree) to run this command
+
 ``` 
 make scope
 ```
