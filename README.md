@@ -30,6 +30,8 @@
   - You'll know you did it right if you can run `git --version` and you see a response like `git version x.x.x`
 - [foundry](https://getfoundry.sh/)
   - You'll know you did it right if you can run `forge --version` and you see a response like `forge 0.2.0 (816e00b 2023-03-16T00:05:26.396218Z)`
+- [just](https://github.com/casey/just)
+  - You'll know you did it right if you can run `just --version` and you see a response like `just 1.x.x`
 <!-- Additional requirements here -->
 
 ## Installation
@@ -37,13 +39,13 @@
 ```bash
 git clone <MY_REPO>
 cd <MY_REPO>
-make
+just
 ```
 
-## Quickstart 
+## Quickstart
 
 ```bash
-make test
+just test
 ```
 
 # Usage 
@@ -62,7 +64,7 @@ forge coverage
 > You'll need to install tree foor [linux](https://linux.die.net/man/1/tree) or [mac](https://formulae.brew.sh/formula/tree) to run this command
 
 ``` 
-make scope
+just scope
 ```
 - Solc Version: X.X.X
 - Chain(s) to deploy to:
