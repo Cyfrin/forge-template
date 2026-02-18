@@ -46,6 +46,10 @@ optimism = { key = "${API_KEY_OPTIMISTIC_ETHERSCAN}" }
 polygon = { key = "${API_KEY_POLYGONSCAN}" }
 sepolia = { key = "${API_KEY_ETHERSCAN}" }
 
+[lint]
+exclude_lints = ["mixed-case-variable"]
+ignore = ["test/**/*"]
+
 
 [rpc_endpoints]
 # example:
