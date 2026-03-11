@@ -1,9 +1,8 @@
-# Name 
+# Name
 
 <p align="center">
 <img src="./images/logo.png" width="200" alt="Name">
 <br/>
-
 
 - [Name](#name)
 - [About](#about)
@@ -13,10 +12,12 @@
   - [Quickstart](#quickstart)
 - [Usage](#usage)
   - [Coverage](#coverage)
+- [AI-Assisted Development](#ai-assisted-development)
+  - [Skills](#skills)
+  - [Commands](#commands)
 - [Audit Scope Details](#audit-scope-details)
   - [Roles](#roles)
   - [Known Issues](#known-issues)
-
 
 # About
 
@@ -48,7 +49,7 @@ just
 just test
 ```
 
-# Usage 
+# Usage
 
 ## Coverage
 
@@ -56,14 +57,38 @@ just test
 forge coverage
 ```
 
-# Audit Scope Details 
+# AI-Assisted Development
+
+This project includes tooling for AI-assisted smart contract development via [Claude Code](https://claude.com/claude-code).
+
+## Skills
+
+- **[solskill](https://github.com/Cyfrin/solskill)** — production-grade Solidity development guidance (testing, security, code quality)
+
+Install with:
+
+```bash
+npx skills add cyfrin/solskill
+```
+
+## Commands
+
+Slash commands from [Trail of Bits' claude-code-config](https://github.com/trailofbits/claude-code-config):
+
+| Command | Description |
+|---------|-------------|
+| `/fix-issue <number>` | Plan, implement, test, review, and PR for a GitHub issue |
+| `/review-pr <number>` | Multi-agent PR review, fix findings, and push |
+| `/merge-dependabot <org/repo>` | Evaluate and merge Dependabot PRs with dependency analysis |
+
+# Audit Scope Details
 
 - Commit Hash: XXX
 - Files in scope:
 
-> You'll need to install tree foor [linux](https://linux.die.net/man/1/tree) or [mac](https://formulae.brew.sh/formula/tree) to run this command
+> You'll need to install tree for [linux](https://linux.die.net/man/1/tree) or [mac](https://formulae.brew.sh/formula/tree) to run this command
 
-``` 
+```
 just scope
 ```
 - Solc Version: X.X.X
