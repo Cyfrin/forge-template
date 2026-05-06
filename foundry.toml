@@ -3,7 +3,10 @@ src = "src"
 out = "out"
 libs = ["lib"]
 solc = "0.8.24"
-remappings = ['@openzeppelin/contracts=lib/openzeppelin-contracts/contracts']
+remappings = [
+    '@openzeppelin/contracts=lib/openzeppelin-contracts/contracts',
+    'battlechain-lib/=lib/battlechain-lib/src/',
+]
 # fs_permissions = [
 #     { access = "read", path = "./broadcast" },
 #     { access = "read", path = "./reports" },
@@ -52,8 +55,7 @@ ignore = ["test/**/*"]
 
 
 [rpc_endpoints]
-# example:
-# zksync = "https://mainnet.era.zksync.io"
+battlechain_testnet = "https://testnet.battlechain.com"
 
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

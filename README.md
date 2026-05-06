@@ -57,6 +57,20 @@ just test
 forge coverage
 ```
 
+## BattleChain deployment
+
+This template ships with [`battlechain-lib`](https://github.com/cyfrin/battlechain-lib) wired up for deployments to [BattleChain](https://docs.battlechain.com/) (battle-testing layer between testnet and mainnet) and any CreateX-supported EVM chain.
+
+Edit `script/BCDeployer.s.sol` to set your protocol name, contacts, and recovery address, then deploy via the imported `battlechain.just` targets:
+
+```bash
+just bc-deploy script/BCDeployer.s.sol $ACCOUNT $SENDER
+just bc-deploy-verify script/BCDeployer.s.sol $ACCOUNT $SENDER
+just bc-verify-broadcast script/BCDeployer.s.sol
+```
+
+Where `$ACCOUNT` is a Foundry keystore account name and `$SENDER` is its public address. Never commit private keys.
+
 # AI-Assisted Development
 
 This project includes tooling for AI-assisted smart contract development via [Claude Code](https://claude.com/claude-code).

@@ -2,7 +2,7 @@
 pragma solidity 0.8.24;
 
 import { Script } from "forge-std/Script.sol";
-import {console2} from "forge-std/console2.sol";
+import { console2 } from "forge-std/console2.sol";
 
 contract HelperConfig is Script {
     /*//////////////////////////////////////////////////////////////
@@ -23,11 +23,8 @@ contract HelperConfig is Script {
     uint256 constant ETH_MAINNET_CHAIN_ID = 1;
     uint256 constant ETH_SEPOLIA_CHAIN_ID = 11_155_111;
 
-    uint256 constant ZKSYNC_MAINNET_CHAIN_ID = 324;
-    uint256 constant ZKSYNC_SEPOLIA_CHAIN_ID = 300;
-
-    uint256 constant POLYGON_MAINNET_CHAIN_ID = 137;
-    uint256 constant POLYGON_MUMBAI_CHAIN_ID = 80_001;
+    uint256 constant BATTLECHAIN_MAINNET_CHAIN_ID = 626;
+    uint256 constant BATTLECHAIN_TESTNET_CHAIN_ID = 627;
 
     // Local network state variables
     NetworkConfig public localNetworkConfig;
@@ -38,11 +35,9 @@ contract HelperConfig is Script {
     //////////////////////////////////////////////////////////////*/
     constructor() {
         networkConfigs[ETH_MAINNET_CHAIN_ID] = getEthMainnetConfig();
-        networkConfigs[ETH_SEPOLIA_CHAIN_ID] = getZkSyncSepoliaConfig();
-        networkConfigs[ZKSYNC_MAINNET_CHAIN_ID] = getZkSyncConfig();
-        networkConfigs[ZKSYNC_SEPOLIA_CHAIN_ID] = getZkSyncSepoliaConfig();
-        networkConfigs[POLYGON_MAINNET_CHAIN_ID] = getPolygonMainnetConfig();
-        networkConfigs[POLYGON_MUMBAI_CHAIN_ID] = getPolygonMumbaiConfig();
+        networkConfigs[ETH_SEPOLIA_CHAIN_ID] = getEthSepoliaConfig();
+        networkConfigs[BATTLECHAIN_MAINNET_CHAIN_ID] = getBattleChainMainnetConfig();
+        networkConfigs[BATTLECHAIN_TESTNET_CHAIN_ID] = getBattleChainTestnetConfig();
     }
 
     function getConfigByChainId(uint256 chainId) public returns (NetworkConfig memory) {
@@ -64,19 +59,15 @@ contract HelperConfig is Script {
         return NetworkConfig({ someVar: address(1) });
     }
 
-    function getZkSyncConfig() public pure returns (NetworkConfig memory) {
+    function getEthSepoliaConfig() public pure returns (NetworkConfig memory) {
         return NetworkConfig({ someVar: address(1) });
     }
 
-    function getZkSyncSepoliaConfig() public pure returns (NetworkConfig memory) {
+    function getBattleChainMainnetConfig() public pure returns (NetworkConfig memory) {
         return NetworkConfig({ someVar: address(1) });
     }
 
-    function getPolygonMainnetConfig() public pure returns (NetworkConfig memory) {
-        return NetworkConfig({ someVar: address(1) });
-    }
-
-    function getPolygonMumbaiConfig() public pure returns (NetworkConfig memory) {
+    function getBattleChainTestnetConfig() public pure returns (NetworkConfig memory) {
         return NetworkConfig({ someVar: address(1) });
     }
 
@@ -91,7 +82,7 @@ contract HelperConfig is Script {
         console2.log("Make sure this was intentional");
 
         _deployMocks();
-        
+
         localNetworkConfig = NetworkConfig({ someVar: address(1) });
         return localNetworkConfig;
     }

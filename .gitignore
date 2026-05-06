@@ -15,3 +15,6 @@ docs/
 
 # zkSync files
 zkout/
+
+# Cyfrin
+.claude/

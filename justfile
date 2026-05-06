@@ -1,5 +1,7 @@
 set dotenv-load
 
+import "lib/battlechain-lib/battlechain.just"
+
 all: remove install build
 
 # Clean the repo
@@ -11,7 +13,7 @@ remove:
     rm -rf .gitmodules && rm -rf .git/modules/* && rm -rf lib && touch .gitmodules && git add . && git commit -m "modules"
 
 install:
-    forge install foundry-rs/forge-std  && forge install openzeppelin/openzeppelin-contracts 
+    forge install foundry-rs/forge-std && forge install openzeppelin/openzeppelin-contracts && forge install cyfrin/battlechain-lib
 
 # Update Dependencies
 update:
